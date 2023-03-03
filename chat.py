@@ -22,21 +22,22 @@ def chat_interface():
     # setting up session state for message history
     if "message_history" not in st.session_state:
         st.session_state.message_history = [] 
-    print(st.session_state.message_history, "message history")
+
+    # previous messages
     for message_obj in st.session_state.message_history:
-        print(message_obj)
         if message_obj.get("content",False): 
             message(message_obj["content"],is_user=True if message_obj["role"] == "user" else False, key = generate()) # display all the previous message
     
     placeholder = st.empty() # placeholder for latest message
+    
+    # submitting form for new message ( clear input not found in other ways. )
     chat_input_form = st.form("chat_input" , clear_on_submit= True)
     input_ = chat_input_form.text_input(label = "message", key = "usermessage",value = '' , placeholder="Enter your message")
-    # hide submit button 
-    submit = chat_input_form.form_submit_button(label = "Send", )
+    # send button 
+    submit = chat_input_form.form_submit_button(label = "Send" )
+    #setting up for the proper inputs 
     if input_:
-        print(input_)
         st.session_state.message_history.append({"role":"user", "content":input_})
-        # st.session_state["usermessage"] = ''
         response = get_response(st.session_state.message_history, model)
         st.session_state.message_history.append(response)
     
