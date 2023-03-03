@@ -1,2 +1,2 @@
 # GPT-compare
-frontend for comparing all GPT models with streamlit interface
+Awesome web interface for comparing outputs across various openai GPT models 
