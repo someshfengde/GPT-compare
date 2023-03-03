@@ -4,6 +4,7 @@ import openai
 from introduction import * 
 from question_answering import *
 from default import *
+from chat import * 
 
 
 st.set_page_config(
@@ -52,3 +53,5 @@ if task_selection == "Intro":
     intro()
 elif task_selection == "Question answering":
     question_answering()
+elif task_selection == "Chat":
+    chat_interface()

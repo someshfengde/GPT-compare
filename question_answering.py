@@ -6,7 +6,6 @@ def get_completion(que, model):
             model= model ,
             prompt=que,
             max_tokens=1024
-
             )
     print(resp_model)
     return resp_model["choices"][0]["text"].strip()
