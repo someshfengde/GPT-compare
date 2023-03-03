@@ -5,6 +5,12 @@ from introduction import *
 from question_answering import *
 from default import *
 from chat import * 
+from image_gen import *
+from speech_text import *
+from code_gen import *
+from content_mod import *
+from num_embed import *
+from gpt3 import *
 
 
 st.set_page_config(
@@ -55,3 +61,15 @@ elif task_selection == "Question answering":
     question_answering()
 elif task_selection == "Chat":
     chat_interface()
+elif task_selection == "Image generation":
+    image_gen_interface()
+elif task_selection == "Speech to text":
+    speech_text_interface()
+elif task_selection == "Code Generation":
+    code_gen_interface()
+elif task_selection == "Content Moderation":
+    content_mod_interface()
+elif task_selection == "Get Numerical Embeddings":
+    num_embed_interface()
+elif task_selection == "GPT3 models":
+    gpt_3_interface()
