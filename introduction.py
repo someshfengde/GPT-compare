@@ -28,8 +28,10 @@ def intro():
     ## What does this demo offers? 
     checkbox markdown 
 
-    Question answering 
-    - [ ] Image generation 
+    ### Tasks tracking
+    - [x] Chat
+    - [x]Question answering 
+    - [x] Image generation 
     - [ ] Speech to text
     - [ ] Code generation
     - [ ] Content moderation
