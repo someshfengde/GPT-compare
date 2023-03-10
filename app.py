@@ -48,7 +48,7 @@ if available_models != None and st.session_state["api_key"] != None:
             # TOBE IMPLEMENTED.
             # "Speech to text",
             # "Code Generation",
-            # "Content Moderation",
+            "Content Moderation",
             # "Get Numerical Embeddings",
             # "GPT3 models",
             
