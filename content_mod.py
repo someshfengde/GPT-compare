@@ -6,17 +6,16 @@
 import requests
 import streamlit as st
 
-
 def content_mod_interface(api_key):
     st.title("Check content moderation")
     input_text = st.text_input("Enter text to moderate:")
+    model = st.selectbox("Select a model", ["text-moderation-stable", "text-moderation-latest"])
     if not input_text:
         return
-
     url = "https://api.openai.com/v1/moderations"
     headers = {"Content-Type": "application/json",
             "Authorization": f"Bearer {api_key}"}
-    data = {"model": "text-moderation-latest",
+    data = {"model": model,
             "input": input_text}
     response = requests.post(url, headers=headers, json=data)
 
@@ -32,4 +31,4 @@ def content_mod_interface(api_key):
         st.text(f"Flagged: {flagged}")
     else:
         error_message = response.json().get("error", {}).get("message", "Unknown error")
-        st.write(f"Error: {error_message}")
+        st.write(f"Error: {error_message}") 
