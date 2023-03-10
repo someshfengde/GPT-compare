@@ -69,8 +69,8 @@ elif task_selection == "Image generation":
 #     speech_text_interface()
 # elif task_selection == "Code Generation":
 #     code_gen_interface()
-# elif task_selection == "Content Moderation":
-#     content_mod_interface()
+elif task_selection == "Content Moderation":
+    content_mod_interface()
 # elif task_selection == "Get Numerical Embeddings":
 #     num_embed_interface()
 # elif task_selection == "GPT3 models":
