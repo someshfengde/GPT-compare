@@ -11,6 +11,6 @@ Open for contributions and PRs.🙂
 - [x] Image generation 
 - [ ] Speech to text
 - [ ] Code generation
-- [ ] Content moderation
+- [x] Content moderation
 - [ ] Numerical embeddings
 - [ ] GPT3 models
