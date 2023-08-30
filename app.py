@@ -11,7 +11,7 @@ from code_gen import *
 from content_mod import *
 from num_embed import *
 from gpt3 import *
-from analytics import *
+# from analytics import *
 
 
 st.set_page_config(
@@ -21,7 +21,7 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
-inject_ga() # for analytics purpose
+# inject_ga() # for analytics purpose
 available_models = None
 st.sidebar.title("Compare openai models")
 st.sidebar.caption("A tool to compare the usage and performances of various openai models")
